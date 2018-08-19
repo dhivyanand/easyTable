@@ -1,0 +1,5 @@
+<root>
+    <item name='android.content.Context MODE_PRIVATE'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start" >
+
+    <include
+        layout="@layout/app_bar_home_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true" >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <Button
+               android:id="@+id/jump_staff"
+               android:layout_width="match_parent"
+               android:layout_height="?android:attr/actionBarSize"
+               android:layout_marginTop="?android:attr/actionBarSize"
+               android:text="Edit Staff Details"
+               android:textColor="#FFF"
+               android:backgroundTint="@color/colorPrimary" />
+
+           <Button
+               android:id="@+id/jump_subject"
+               android:layout_width="match_parent"
+               android:layout_height="?android:attr/actionBarSize"
+               android:layout_below="@+id/jump_staff"
+               android:text="Edit Subject Details"
+               android:textColor="#FFF"
+               android:backgroundTint="@color/colorPrimary" />
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="?android:attr/actionBarSize"
+               android:layout_below="@id/jump_subject"
+               android:id="@+id/staff_table"
+               android:text="View Staff Schedule"
+               android:textColor="#FFF"
+               android:backgroundTint="@color/colorAccent"/>
+
+        <ListView
+            android:id="@+id/nav_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/staff_table"
+            android:layout_above="@id/add_class" />
+
+           <Button
+               android:id="@+id/add_class"
+               android:layout_width="match_parent"
+               android:layout_height="?android:attr/actionBarSize"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:backgroundTint="@color/colorAccent"
+               android:text="New Class"
+               android:textColor="#FFF" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/empty_list"
+               android:layout_centerInParent="true"
+               android:text="*No Class Found*" />
+
+    </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
